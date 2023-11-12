@@ -1,5 +1,4 @@
-import { Input } from "@components/common";
-import Button from "@components/common/Button";
+import { Input, Button } from "@components/common";
 import { useMutation } from "@lib/client";
 import Link from "next/link";
 import { useRouter } from "next/router";

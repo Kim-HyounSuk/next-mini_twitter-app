@@ -1,11 +1,9 @@
 import React from "react";
+import useSWR from "swr";
 
 const Home = () => {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  );
+  const { data } = useSWR("/api/tweets");
+  return <div></div>;
 };
 
 export default Home;
