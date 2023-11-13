@@ -3,7 +3,8 @@ CREATE TABLE "User" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "email" TEXT NOT NULL,
     "name" TEXT NOT NULL,
-    "avatar" TEXT,
+    "password" TEXT NOT NULL,
+    "avatar" TEXT NOT NULL DEFAULT '',
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
@@ -30,9 +31,6 @@ CREATE TABLE "Like" (
 
 -- CreateIndex
 CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
-
--- CreateIndex
-CREATE UNIQUE INDEX "Tweet_userId_key" ON "Tweet"("userId");
 
 -- CreateIndex
 CREATE INDEX "Tweet_userId_idx" ON "Tweet"("userId");

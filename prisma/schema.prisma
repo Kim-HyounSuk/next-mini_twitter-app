@@ -29,7 +29,7 @@ model Tweet {
   updatedAt DateTime @default(now())
   likes Like[]
   user User @relation(fields: [userId], references: [id], onDelete:Cascade)
-  userId String @unique
+  userId String
   @@index([userId])
 }
 
